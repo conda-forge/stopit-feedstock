@@ -3,7 +3,7 @@ About stopit
 
 Home: https://pypi.python.org/pypi/stopit
 
-Package license: GPL-3.0
+Package license: MIT
 
 Feedstock license: BSD 3-Clause
 
