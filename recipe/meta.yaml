@@ -1,30 +1,31 @@
 {% set name = "stopit" %}
 {% set version = "1.1.2" %}
-{% set sha256 = "f7f39c583fd92027bd9d06127b259aee7a5b7945c1f1fa56263811e1e766996d" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.tar.gz
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: {{ sha256 }}
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: f7f39c583fd92027bd9d06127b259aee7a5b7945c1f1fa56263811e1e766996d
 
 build:
-  number: 0
+  number: 1
   noarch: python
-  script: python -m pip install --no-deps --ignore-installed .
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
 requirements:
-  build:
-    - python
+  host:
+    - python {{ python_min }}
+    - setuptools
     - pip
   run:
-    - python
+    - python >={{ python_min }}
     - setuptools
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - stopit
 
