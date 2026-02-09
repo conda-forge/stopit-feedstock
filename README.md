@@ -3,22 +3,20 @@ About stopit-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/stopit-feedstock/blob/main/LICENSE.txt)
 
-Home: https://pypi.python.org/pypi/stopit
+Home: https://pypi.org/pypi/stopit
 
 Package license: MIT
 
 Summary: Raise asynchronous exceptions in other thread, control the timeout of
 blocks or callables with a context manager or a decorator
 
-
 Development: https://github.com/glenfant/stopit
 
 This module provides:
-  - a function that raises an exception in another thread, including the
-    main thread.
-  - two context managers that may stop its inner block activity on timeout.
-  - two decorators that may stop its decorated callables on timeout.
-
+- a function that raises an exception in another thread, including the
+main thread.
+- two context managers that may stop its inner block activity on timeout.
+- two decorators that may stop its decorated callables on timeout.
 
 Current build status
 ====================
